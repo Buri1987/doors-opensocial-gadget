@@ -1,9 +1,25 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<Module specificationVersion="2.0">
-<ModulePrefs title="Attributes" height="700" scrolling="true">
-<Require feature="com.ibm.rdm.rm.api"/>
-</ModulePrefs>
-<Content type="html">
-<![CDATA[ <html><body>test</body></html> ]]>
-</Content>
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs
+      title="Test Widget"
+      description="Minimal DOORS Widget"
+      height="200">
+
+    <Require feature="opensocial-0.9"/>
+    <Require feature="settitle"/>
+    <Require feature="dynamic-height"/>
+  </ModulePrefs>
+
+  <Content type="html">
+    <![CDATA[
+      <div id="content">
+        DOORS Widget funktioniert
+      </div>
+
+      <script>
+        gadgets.window.adjustHeight();
+      </script>
+    ]]>
+  </Content>
+
 </Module>

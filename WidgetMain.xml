@@ -4,6 +4,6 @@
 <Require feature="com.ibm.rdm.rm.api"/>
 </ModulePrefs>
 <Content type="html">
-<![CDATA[ <html>  test </html> ]]>
+<![CDATA[ <html><body>test</body></html> ]]>
 </Content>
 </Module>

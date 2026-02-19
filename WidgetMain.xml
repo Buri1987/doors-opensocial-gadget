@@ -1,12 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <Module>
-<ModulePrefs title='Bedienerhilfen Temporär' height='1400' scrolling='true'>
+<ModulePrefs title='Bedienerhilfen' height='1000' scrolling='true'>
 <Require feature='com.ibm.rdm.rm.api'></Require>
 </ModulePrefs>
 <Content type='html'>
 <![CDATA[
+<html>
 
-Hallo Welt
+test
+</html>
 ]]>
-</Content>
+  </Content> 
 </Module>

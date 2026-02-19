@@ -1,14 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<Module>
-<ModulePrefs title='Bedienerhilfen' height='1000' scrolling='true'>
-<Require feature='com.ibm.rdm.rm.api'></Require>
+<Module specificationVersion="2.0">
+<ModulePrefs title="Attributes" height="700" scrolling="true">
+<Require feature="com.ibm.rdm.rm.api"/>
 </ModulePrefs>
-<Content type='html'>
-<![CDATA[
-<html>
-
-test
-</html>
-]]>
-  </Content> 
+<Content type="html">
+<![CDATA[ <html>  test </html> ]]>
+</Content>
 </Module>

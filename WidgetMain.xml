@@ -216,20 +216,8 @@ document.getElementById("").onclick = function(){anfInBauspecAbleiten("Bauspec")
 document.getElementById("").onclick = function(){anfInBauspecAbleiten("Beistellung"); temp = 2};
 document.getElementById("").onclick = function(){anfInBauspecAbleiten("Option"); temp = 3};
 document.getElementById("").onclick = function(){anfInBauspecAbleiten("Bauspec"); temp = 4};
-
-
-
-
-
-
-
 </script>
-
-
-
-
    </body>
-
 </html>
 ]]>
 </Content>

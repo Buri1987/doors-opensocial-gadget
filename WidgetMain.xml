@@ -1,43 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
 <Module>
-<ModulePrefs title='Bedienerhilfen_aktuell' height='1000' scrolling='true'>
+<ModulePrefs title='Bedienerhilfen Temporär' height='1400' scrolling='true'>
 <Require feature='com.ibm.rdm.rm.api'></Require>
 </ModulePrefs>
 <Content type='html'>
 <![CDATA[
 <html>
    <head>
-		<link rel="stylesheet" type="text/css" href="Style\Style.css?ver=1.003">
-		<script type = "text/javascript" src="Subfunctions\jquery-v3_6.js?ver=1.001"></script>
-		
-		<script type = "text/javascript" src="Subfunctions\anfInBauspecAbleiten.js?ver=1.005"></script>
-		
-		<script type = "text/javascript" src="Subfunctions\guiAnpassen.js?ver=1.04"></script>
-		<script type = "text/javascript" src="Subfunctions\baugruppenNummerLaden.js?ver=1.001"></script>
-		
+		<link rel="stylesheet" type="text/css" href="css\styleWidgets.css?v1.000">
+
+		<div id="result"></div>
+
+		<script 
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+		</script>
+
 	</head>
-	
-	  <body>
-      <span id="anzSelektierteArt">0</span><span> Artefakte selektiert!!!</span>	<!-- $$$ -->
-      <div id="container">
 
 
-      
-        <div id="AnfInBauspecUebertragen">
-          <p id="textAnfInBauspecUebertragen"><b>[W3]</b> Markierte Anforderung in Bauspec...</p>	<!-- $$$ -->
-          <button id="btnAnfInBauspecAbleiten" onclick="">...übertragen</button>		<!-- $$$ -->
-        </div>			
-      </div>
+   <body>
+		<span id="anzSelektierteArt">0</span><span> Artefakte selektiert!!!</span>	
+		<div id="container">
 
+			<div id="AnfInBauspecUebertragen">
+				<p id="textAnfInBauspecUebertragen"><b>[W3]</b> Markierte Anforderung in Bauspec...</p>
+				<button id="btnAnfInBauspecAbleiten" onclick="">...übertragen</button>	
+			</div>										
+			
+	</div>
+		</div>
 		
-		
 
-    <script>
+		<script>
+
+			//Button und Funktionen verbinden:
+			
+			document.getElementById("btnAnfInBauspecAbleiten").onclick = function(){anfInBauspecAbleiten()};
+
+			
+			//Projektreferenzen definieren:
+			var uriKonfiKontext;
+			var modulInterneAnforderungen;
+			var ersteAnfInterneAnforderungen;
+			var modulBgUrl;
+			var erzeugteAnf = new Object();
+			var uebernommeneAnf = 0;
+			var hinzugefuegteAnf = 0;
+
+			RM.Event.subscribe(RM.Event.ARTIFACT_OPENED, function(ref){
+				guiAnpassen(ref);
+				projektReferenzenAnpassen(ref);
+
+			});
+
+		</script>
+		<div id="result"></div>
 
 
-document.getElementById("btnAnfInBauspecAbleiten").onclick = function(){anfInBauspecAbleiten("Bauspec"); temp = 1};
+		<script type = "text/javascript" src="js\ProjektReferenzenAnpassen.js"></script>
 
-    </script>
-  </body>
+		//Testfunktionen
+
+		<script type = "text/javascript" src="js\afoBezugAktualisieren.js?v1.001"></script>
+		<script type = "text/javascript" src="js\afoErmitteln.js?v1.005"></script>
+		<script type = "text/javascript" src="js\anfInBauspecAbleiten.js"></script>
+		<script type = "text/javascript" src="js\anfInBauspecVerschieben.js"></script>
+		<script type = "text/javascript" src="js\baugruppenNummerLaden.js"></script>
+		<script type = "text/javascript" src="js\bgVerlinken.js"></script>
+		<script type = "text/javascript" src="js\contentBauspecBandAuslesen.js"></script>
+		<script type = "text/javascript" src="js\getBauSpecKapitelZuBg.js"></script>
+		<script type = "text/javascript" src="js\getBgBummerVonUeberschriftStructureNode.js"></script>
+		<script type = "text/javascript" src="js\guiAnpassen.js?v1.001"></script>
+		<script type = "text/javascript" src="js\mBgVLaden.js"></script>
+		<script type = "text/javascript" src="js\WidgetsEinblenden.js"></script>
+	</body>
 </html>
 ]]>
 </Content>

@@ -7,217 +7,37 @@
 <html>
    <head>
 		<link rel="stylesheet" type="text/css" href="Style\Style.css?ver=1.003">
-		<script type = "text/javascript" src="BedienerhilfenWidget\BedienerhilfenUnterprogramme\Subfunctions\jquery-v3_6.js?ver=1.001"></script>
+		<script type = "text/javascript" src="Subfunctions\jquery-v3_6.js?ver=1.001"></script>
 		
-		<script type = "text/javascript" src="BedienerhilfenWidget\BedienerhilfenUnterprogramme\Subfunctions\anfInBauspecAbleiten.js?ver=1.005"></script>
-		<script type = "text/javascript" src="BedienerhilfenWidget\BedienerhilfenUnterprogramme\Subfunctions\ableitenAnAnderenFako.js?ver=1.005"></script>
-		<script type = "text/javascript" src="BedienerhilfenWidget\BedienerhilfenUnterprogramme\Subfunctions\bgVerlinken.js?ver=1.005"></script>
-		<script type = "text/javascript" src="BedienerhilfenWidget\BedienerhilfenUnterprogramme\Subfunctions\intAnfAbleiten.js?ver=1.005"></script>
-		<script type = "text/javascript" src="BedienerhilfenWidget\BedienerhilfenUnterprogramme\Subfunctions\uebernehmen.js?ver=1.003"></script>
-		<script type = "text/javascript" src="BedienerhilfenWidget\BedienerhilfenUnterprogramme\Subfunctions\beziehungsgeflechtAuslesen.js?ver=1.003"></script>
-		<script type = "text/javascript" src="BedienerhilfenWidget\BedienerhilfenUnterprogramme\Subfunctions\guiAnpassen.js?ver=1.04"></script>
-		<script type = "text/javascript" src="BedienerhilfenWidget\BedienerhilfenUnterprogramme\Subfunctions\ableitenAnSich.js?ver=1.011"></script>
-		<script type = "text/javascript" src="BedienerhilfenWidget\BedienerhilfenUnterprogramme\Subfunctions\aenderungsManagementWidgetAktualisieren.js?ver=1.044"></script>
-		<script type = "text/javascript" src="BedienerhilfenWidget\BedienerhilfenUnterprogramme\Subfunctions\baugruppenNummerLaden.js?ver=1.001"></script>
-		<script type = "text/javascript" src="BedienerhilfenWidget\BedienerhilfenUnterprogramme\Subfunctions\AMLinksLaden.js?ver=1.000"></script>
-		<script type = "text/javascript" src="BedienerhilfenWidget\BedienerhilfenUnterprogramme\Subfunctions\zuIntAnfZusammenfassen.js?ver=1.014"></script>
-		<script type = "text/javascript" src="BedienerhilfenWidget\BedienerhilfenUnterprogramme\Subfunctions\getBlockName.js?ver=1.000"></script>
-		<script type = "text/javascript" src="BedienerhilfenWidget\BedienerhilfenUnterprogramme\Subfunctions\userStoryInIstLBBeantworten.js?ver=1.000"></script>
-		<script type = "text/javascript" src="BedienerhilfenWidget\BedienerhilfenUnterprogramme\Subfunctions\userStoryInIstLBBeantworten.js?ver=1.000"></script>
+		<script type = "text/javascript" src="Subfunctions\anfInBauspecAbleiten.js?ver=1.005"></script>
+		
+		<script type = "text/javascript" src="Subfunctions\guiAnpassen.js?ver=1.04"></script>
+		<script type = "text/javascript" src="Subfunctions\baugruppenNummerLaden.js?ver=1.001"></script>
+		
 	</head>
 	
-	<body>
-		<span id="anzSelektierteArt">0</span><span> Artefakte selektiert!!!</span>	<!-- $$$ -->
-		<div id="container">
-			<div id="ÜberschriftInBauspec">
-				<p><b>[W1]</b> Überschrift in Bauspec erzeugen bzw. hinspringen:</p> 	<!-- $$$ -->
-				<input id="inputBgZuUeberschriftSpringen" placeholder="BG eintragen!!!"></input>	<!-- $$$ -->
-				<button id="btnZuBgSpringen" onclick="">Erzeugen/ Hinspringen</button>	<!-- $$$ -->
-			</div>
+	  <body>
+      <span id="anzSelektierteArt">0</span><span> Artefakte selektiert!!!</span>	<!-- $$$ -->
+      <div id="container">
 
-			<div id="AnforderungAbleitenInBauspec">					
-				<p><b>[W2]</b> Zu markierter Anforderung eine neue Anforderung ableiten:</p>	<!-- $$$ -->
-				<button id="btnAbleitenAnSich" onclick="">...an sich selbst</button>	<!-- $$$ -->
-				<button id="btnAbleitenAnAnderenFako" onclick="">...an anderen Fako</button>			<!-- $$$ -->
-			</div>
-		
-			<div id="AnfInBauspecUebertragen">
-				<p id="textAnfInBauspecUebertragen"><b>[W3]</b> Markierte Anforderung in Bauspec...</p>	<!-- $$$ -->
-				<button id="btnAnfInBauspecAbleiten" onclick="">...übertragen</button>		<!-- $$$ -->
-			</div>			
-			
 
-			<div id="intBgVerlinken">
-				<p><b>[W8]</b>Selektiere Anforderungen mit folgender Baugruppe...</p>	<!-- $$$ -->
-				<input id="inputBG" placeholder="BG eintragen!!!"></input>	<!-- $$$ -->
-   				<button id="bgVerlinken">...verlinken</button>	<!-- $$$ -->
-				<div id="dropdownBgVerlinkungBAs"class="dropdown, invisible">
-					<button id="btnFallVergleichsLBVerantwortlickeit" onclick="myFunction2(2)" class="dropbtn">MBA/BA auswählen</button>
-					<div id="myDropdownVerantwortlichkeit" style="height:400px; overflow:auto; width: 90%;" class="dropdown-content">
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '0000';bgVerlinken();})()">0000 Richtlinien und Leistungen für Planung, Bau und Nutzung</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '0100';bgVerlinken();})()">0100 Auslegung, Berechnung, Baugrundsätze</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '0200';bgVerlinken();})()">0200 Techn./Physikal. Grundlagen zur Auslegung von Bauelementen, Geräten u. Fundamenten</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '0300';bgVerlinken();})()">0300 Werkstoffe, Betriebsstoffe, Verbrauchsstoffe</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '0400';bgVerlinken();})()">0400 Signatursystem Schiff</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '0500';bgVerlinken();})()">0500 Messen, Meßgeräte</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '0600';bgVerlinken();})()">0600 Qualitätssicherung (QS), Erprobungen und Versuche</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '0700';bgVerlinken();})()">0700 Bezeichnungen, Zeichnungen, Bau- und Ablieferungsunterlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '0800';bgVerlinken();})()">0800 Hilfsmittel für die Fertigung und Instandhaltung</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '0900';bgVerlinken();})()">0900 Betriebsangelegenheiten für alle Hauptbauabschnitte, Nebenkosten</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '1000';bgVerlinken();})()">1000 Schiff mit Ausrüstung und Einrichtung</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '1100';bgVerlinken();})()">1100 Bau des metallischen Schiffskörpers sowie Druckkörper Uboot</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '1200';bgVerlinken();})()">1200 Bau metallischer Aufbauten und Deckshäuser sowie Außenschiff Uboot</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '1300';bgVerlinken();})()">1300 Bau nichtmetallischer Schiffskörper</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '1400';bgVerlinken();})()">1400 Bau nichtmetallischer Aufbauten und Deckshäuser</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '1500';bgVerlinken();})()">1500 Aufstellung Führungsdienstm., Feuerleitanl., Waffen usw. sowie Mun. Lag.</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '1600';bgVerlinken();})()">1600 Ausrüstung</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '1700';bgVerlinken();})()">1700 Einrichtung für Besatzungsräume</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '1800';bgVerlinken();})()">1800 Einrichtung f. Schiffssich., -führung, Betriebs- u. Stauräume</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '1900';bgVerlinken();})()">1900 Materialschutz und Decksbeläge</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '2000';bgVerlinken();})()">2000 Antriebsanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '2100';bgVerlinken();})()">2100 Dieselmotorenanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '2200';bgVerlinken();})()">2200 Gasturbinenanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '2300';bgVerlinken();})()">2300 Dampfanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '2400';bgVerlinken();})()">2400 Elektrische Anlagen für Antrieb</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '2500';bgVerlinken();})()">2500 Leistungsübertragungsanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '2600';bgVerlinken();})()">2600 Schiffsvortriebsanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '2700';bgVerlinken();})()">2700 Hilfseinrichtungen für den Antrieb</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '2800';bgVerlinken();})()">2800 Einricht. f. Lagerung und Transport von Betriebsstoffen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '2900';bgVerlinken();})()">2900 Sonstige Antriebe</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '3000';bgVerlinken();})()">3000 E Anlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '3100';bgVerlinken();})()">3100 Bordnetze, E Maschinen, Stromrichter</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '3200';bgVerlinken();})()">3200 E Erzeugungsanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '3300';bgVerlinken();})()">3300 Schaltanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '3400';bgVerlinken();})()">3400 Kabelanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '3500';bgVerlinken();})()">3500 Beleuchtungsanlagen, Positionslaternen, Signallichter</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '3600';bgVerlinken();})()">3600 Nichtintegrierte Automatisierungsanlagen, Überwachungs-, Warn- und Alarmanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '3700';bgVerlinken();})()">3700 Führungssystem Automation Schiffstechnik</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '3800';bgVerlinken();})()">3800 Ersatzstrom- und Notstromversorgungsanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '3900';bgVerlinken();})()">3900 E Sonderanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '4000';bgVerlinken();})()">4000 Schiffsbetriebsanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '4100';bgVerlinken();})()">4100 Manövrieranlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '4200';bgVerlinken();})()">4200 Winden, Kräne, Förder-, Schließeinrichtungen; Versorgung in See</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '4300';bgVerlinken();})()">4300 Seekühlwasser-, Lenz-, Lecklenz- und Ballastwasseranl. sowie Sicherheitseinrichtungen für Zellen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '4400';bgVerlinken();})()">4400 Feuerlösch-, Sprüh- und Berieselungsanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '4500';bgVerlinken();})()">4500 Sanitär- und Abfallbeseitigungsanlagen, Abfluß- und Speigatteinrichtungen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '4600';bgVerlinken();})()">4600 Lüftungstechnische Anlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '4700';bgVerlinken();})()">4700 Kälteanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '4800';bgVerlinken();})()">4800 Wirtschafts-, Taucher- und Atemlufteinrichtungen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '4900';bgVerlinken();})()">4900 Einrichtungen für Bordhubschrauber und Flugdrohnen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '5000';bgVerlinken();})()">5000 Fernmelde-, Navigations-, Ortungs- und EloKa Anlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '5100';bgVerlinken();})()">5100 Funk-Nachrichtenanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '5200';bgVerlinken();})()">5200 Funk- Navigations- und Funk-Ortungsanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '5300';bgVerlinken();})()">5300 Optische Nachrichten- und Signalanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '5400';bgVerlinken();})()">5400 Wärme- Peil- und Ortungsanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '5500';bgVerlinken();})()">5500 Wasserschall-, Ortungs- und Nachrichtenanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '5600';bgVerlinken();})()">5600 Schreibfunk/Datenübertragung und BÜ Anlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '5700';bgVerlinken();})()">5700 EloKa Anlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '5800';bgVerlinken();})()">5800 Navigationsanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '5900';bgVerlinken();})()">5900 Datennetze (hier: Bordeigene Netze) siehe auch HBA 6600 und 6700</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '6000';bgVerlinken();})()">6000 Führungs- und Waffeneinsatzsysteme</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '6100';bgVerlinken();})()">6100 Waffenleitanlagen für Artilleriebewaffnung</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '6200';bgVerlinken();})()">6200 Waffenleit- und -Lenkanlagen für Flugkörper- und Raketenbewaffnung</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '6300';bgVerlinken();})()">6300 Waffenleit- und -Lenkanlagen für Torpedobewaffnung auf Ubooten</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '6400';bgVerlinken();})()">6400 Waffenleit- und -Lenkanlagen für Torpedo- und UJagdbewaffnung auf Überwasserschiffen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '6500';bgVerlinken();})()">6500 Kombinierte Waffenleit- und -Lenkanlagen für Überwasserschiffe</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '6600';bgVerlinken();})()">6600 Integriertes Führungs- und Waffeneinsatzsystem</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '6700';bgVerlinken();})()">6700 Datenverarbeitungs- und Datenübertragungsanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '6800';bgVerlinken();})()">6800 Waffeneinsatz- und Zielanweisungsanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '6900';bgVerlinken();})()">6900 Operationszentralen-Technik</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '7000';bgVerlinken();})()">7000 Waffenanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '7100';bgVerlinken();})()">7100 Artilleriebewaffnung für See- und Luftziele</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '7200';bgVerlinken();})()">7200 Flugkörper- und Raketenbewaffnung für See- und Luftziele</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '7300';bgVerlinken();})()">7300 Torpedobewaffnung</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '7400';bgVerlinken();})()">7400 UJagdbewaffnung</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '7500';bgVerlinken();})()">7500 Handwaffen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '7600';bgVerlinken();})()">7600 Munition für die Über- und Unterwasserwaffen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '7700';bgVerlinken();})()">7700</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '7800';bgVerlinken();})()">7800</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '7900';bgVerlinken();})()">7900</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '8000';bgVerlinken();})()">8000 Sperrwaffen-Anlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '8100';bgVerlinken();})()">8100 Wurf-, Transport-, Lagerungs- und Vorbereitungseinrichtung für Minen und Minenfeldschutzmittel</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '8200';bgVerlinken();})()">8200 Minensuch- und Minenortungsgeräte sowie Bezeichnungsbojeneinrichtungen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '8300';bgVerlinken();})()">8300 Minenräumgeräte-Einrichtungen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '8400';bgVerlinken();})()">8400 Passiver Schiffsschutz</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '8500';bgVerlinken();})()">8500 See-Kleinkampfmittel-, Netz- und Balkensperren und Minenjagd-Einrichtungen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '8600';bgVerlinken();})()">8600 Minen- und Minenfeldschutzmittel</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '8700';bgVerlinken();})()">8700 Minensuch-, Minenortungsgeräte und Bezeichnungsbojen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '8800';bgVerlinken();})()">8800 Minenräumgeräte</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '8900';bgVerlinken();})()">8900 See-Kleinkampfmittel, Netz- und Balkensperren, Minenjagdsysteme</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '9000';bgVerlinken();})()">9000 Geräte, Werkzeuge, Ersatzteile, Technische Unterlagen, Werkzeugmaschinen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '9100';bgVerlinken();})()">9100 Geräte, Ersatzteile usw. für Schiff mit Ausrüstung und Einrichtung</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '9200';bgVerlinken();})()">9200 Geräte, Ersatzteile usw. für Antriebsanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '9300';bgVerlinken();})()">9300 Geräte, Ersatzteile usw. für elektrische Anlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '9400';bgVerlinken();})()">9400 Geräte, Ersatzteile usw. für Schiffsbetriebsanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '9500';bgVerlinken();})()">9500 Geräte, Ersatzteile usw. für Fernmelde-, Navigations-, Ortungs- und EloKa-Anlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '9600';bgVerlinken();})()">9600 Geräte, Ersatzteile usw. für Führungs- und Waffeneinsatzsysteme</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '9700';bgVerlinken();})()">9700 Geräte, Ersatzteile usw. für Waffenanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '9800';bgVerlinken();})()">9800 Geräte, Ersatzteile usw. für Sperrwaffenanlagen</a>
-						<a href="javascript:(function(){document.getElementById('inputBG').value = '9900';bgVerlinken();})()">9900 Werkzeugmaschinen und Werkzeuge für die Hauptbauabschnitte 1000 bis 8000</a>
-
-					</div>
-				</div>
-			</div>
-			<div id="intBgVerlinkenProjektierung">
-				<p><b>[W8]</b>Selektiere Anforderungen mit folgender Baugruppe...</p>	<!-- $$$ -->
-				<input id="inputBgProjektierung" placeholder="BG eintragen!!!"></input>	<!-- $$$ -->
-   				<button id="bgVerlinkenProjektierung">...verlinken</button>	<!-- $$$ -->
-				<div class="dropdown">
-					<button id="btnFallVergleichsLBVerantwortlickeit" onclick="myFunction2(2)" class="dropbtn">Verantwortlichkeit setzen</button>
-					<div id="myDropdownVerantwortlichkeit" class="dropdown-content">	<!-- $$$ -->
-						<a href="javascript:(function(){document.getElementById('inputBgProjektierung').value = '0000';})()">0000 Richtlinien und Leistungen für Planung, Bau und Nutzung</a>	<!-- $$$ -->
-						<a href="javascript:(function(){document.getElementById('inputBgProjektierung').value = '0100';})()">0100 Auslegung, Berechnung, Baugrundsätze</a>	<!-- $$$ -->
-					</div>
-				</div>
-			</div>
-			<div id="intZusammenfassen">
-				<p><b>[W9]</b>Mehrere markierte "Text In Spec" Elemente im Konzept zu einem Element zusammenfassen:</p>			<!-- $$$ -->
-				<button id="btnZus" onclick="">Zusammenfassen</button>						<!-- $$$ -->
-			</div>
-			<div id="intAbleiten">
-				<p><b>[W10]</b>Zu markierter Anforderung eine Interne Anforderung ableiten:</p>	<!-- $$$ -->
-   				<button id="intAnfAbleiten">Anforderung ableiten</button>	<!-- $$$ -->
-			</div>
-			
-			
-			
-		
-		
-		</div>
+      
+        <div id="AnfInBauspecUebertragen">
+          <p id="textAnfInBauspecUebertragen"><b>[W3]</b> Markierte Anforderung in Bauspec...</p>	<!-- $$$ -->
+          <button id="btnAnfInBauspecAbleiten" onclick="">...übertragen</button>		<!-- $$$ -->
+        </div>			
+      </div>
 
 		
 		
 
-<script>
-var ausgewahltesKonzept;
-
-//Button und Funktionen verbinden:
-document.getElementById("btnZuBgSpringen").onclick = function(){testUeberschrift("Bauspec"); temp = 1}; 
-document.getElementById("btnKonzeptAbleitenInKonzept").onclick = function(){ableitenAnSich("Konzept")};
+    <script>
 
 
-
-
-
-
-document.getElementById("btnZus").onclick = function(){zuIntAnfZusammenfassen()};
-document.getElementById("intAnfAbleiten").onclick = function(){intAnfAbleiten()};
-document.getElementById("bgVerlinken").onclick = function(){bgVerlinken()};
-
-
-
-document.getElementById("btnAbleitenAnSich").onclick = function(){ableitenAnSich("Bauspec")};
-
-document.getElementById("btnAbleitenAnAnderenFako").onclick = function(){ableitenAnAnderenFako()};
-//BauSpec erstellen, indem die Anforderungen per Widget in die BauSpec übertragen werden.
 document.getElementById("btnAnfInBauspecAbleiten").onclick = function(){anfInBauspecAbleiten("Bauspec"); temp = 1};
-// Für FDB424 gibt es weitere BauSpec Bände, welche evtl. nicht bei anderen Projekten benötigt werden.
-document.getElementById("").onclick = function(){anfInBauspecAbleiten("Bauspec"); temp = 1};
-document.getElementById("").onclick = function(){anfInBauspecAbleiten("Beistellung"); temp = 2};
-document.getElementById("").onclick = function(){anfInBauspecAbleiten("Option"); temp = 3};
-document.getElementById("").onclick = function(){anfInBauspecAbleiten("Bauspec"); temp = 4};
-</script>
-   </body>
+
+    </script>
+  </body>
 </html>
 ]]>
 </Content>

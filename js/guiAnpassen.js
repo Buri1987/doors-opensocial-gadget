@@ -10,9 +10,11 @@ function guiAnpassen(ref){
 			//document.getElementById("btnAnfInBauspecAbleiten").classList.remove("invisible");
 
 			switch(opResAttributes.data[0].values[RM.Data.Attributes.ARTIFACT_TYPE].name){
-				case "Konzept":
-					widgetsEinblenden(["intZusammenfassen","intAbleiten","intBgVerlinken","aenderungen","textAnfInBauspecUebertragen"]);
+				case "M_Bedarfe":
+					widgetsEinblenden(["AnfInBauspecUebertragen"]);
 				break;
+
+				/*
 
 				case "Band Bauspec":	
 					widgetsEinblenden(["ÜberschriftInBauspec","AnforderungAbleitenInBauspec","ursprungsforderungenZusammenfassen","AnfAusAltprojektUebernehmen","afoBezugAktualisierenUndLvLöschen"]);
@@ -27,9 +29,9 @@ function guiAnpassen(ref){
 					document.getElementById("textAnfInBauspecUebertragen").innerHTML = "<b>[W3]</b> Markierte Kundenanforderung...";
 					document.getElementById("btnAnfInBauspecAbleiten").innerText = "...direkt in Bauspec beantworten";
 					//document.getElementById("btnAnfInBauspecAbleiten").classList.add("invisible");
-					widgetsEinblenden(["ÜberschriftInBauspec", "AnfInBauspecUebertragen", "intBgVerlinken","AnfAusAltprojektUebernehmen", "intAbleiten"/*,"aendAnf"*/]);
+					widgetsEinblenden(["ÜberschriftInBauspec", "AnfInBauspecUebertragen", "intBgVerlinken","AnfAusAltprojektUebernehmen", "intAbleiten"]);
 				break;
-
+				*/
 				default:
 					widgetsEinblenden([]);
 				break;

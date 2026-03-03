@@ -38,7 +38,7 @@ async function anfInBauspecAbleiten(){
 
 			//2.2 SpecText erzeugen:
 			let attrs = new RM.AttributeValues();
-			attrs[RM.Data.Attributes.ARTIFACT_TYPE] = "Text in Spec";
+			attrs[RM.Data.Attributes.ARTIFACT_TYPE] = "A_Text in Spec";
 			attrs[RM.Data.Attributes.PRIMARY_TEXT] = curSelPrimText ;
 			//Alte Strategy
 			//let strategy = new RM.LocationSpecification(refUeberschrift, RM.Data.PlacementStrategy.BELOW);	

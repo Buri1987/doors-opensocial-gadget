@@ -58,9 +58,6 @@
 
 
 		<script type = "text/javascript" src="js\ProjektReferenzenAnpassen.js"></script>
-
-		//Testfunktionen
-
 		<script type = "text/javascript" src="js\afoBezugAktualisieren.js?v1.001"></script>
 		<script type = "text/javascript" src="js\afoErmitteln.js?v1.005"></script>
 		<script type = "text/javascript" src="js\anfInBauspecAbleiten.js"></script>

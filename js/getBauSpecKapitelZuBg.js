@@ -2,7 +2,7 @@ async function getBauSpecKapitelZuBg(refBg){
 		
 	// Prüfen ob Link zu BauspecKapitel vorhanden ist:
 	let promiseLinkedArti = new Promise(function(resolve, reject){                  
-		RM.Data.getLinkedArtifacts(refBg,"Bauspec-Kapitel", function(res){  
+		RM.Data.getLinkedArtifacts(refBg,"SpecKapitel", function(res){  
 			resolve(res.data.artifactLinks);
 		});
 	});

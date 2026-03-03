@@ -56,19 +56,22 @@
 		</script>
 		<div id="result"></div>
 
-
+		<script type = "text/javascript" src="js\guiAnpassen.js?v1.001"></script>	
 		<script type = "text/javascript" src="js\ProjektReferenzenAnpassen.js"></script>
+		<script type = "text/javascript" src="js\anfInBauspecAbleiten.js"></script>
+		<script type = "text/javascript" src="js\mBgVLaden.js"></script>
+		<script type = "text/javascript" src="js\getUeberschriftenRefZuBgRef.js"></script>
+
+
+
 		<script type = "text/javascript" src="js\afoBezugAktualisieren.js?v1.001"></script>
 		<script type = "text/javascript" src="js\afoErmitteln.js?v1.005"></script>
-		<script type = "text/javascript" src="js\anfInBauspecAbleiten.js"></script>
 		<script type = "text/javascript" src="js\anfInBauspecVerschieben.js"></script>
 		<script type = "text/javascript" src="js\baugruppenNummerLaden.js"></script>
 		<script type = "text/javascript" src="js\bgVerlinken.js"></script>
 		<script type = "text/javascript" src="js\contentBauspecBandAuslesen.js"></script>
 		<script type = "text/javascript" src="js\getBauSpecKapitelZuBg.js"></script>
 		<script type = "text/javascript" src="js\getBgBummerVonUeberschriftStructureNode.js"></script>
-		<script type = "text/javascript" src="js\guiAnpassen.js?v1.001"></script>
-		<script type = "text/javascript" src="js\mBgVLaden.js"></script>
 		<script type = "text/javascript" src="js\WidgetsEinblenden.js"></script>
 	</body>
 </html>

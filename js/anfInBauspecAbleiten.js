@@ -10,7 +10,7 @@ async function anfInBauspecAbleiten(){
 		if(currentSelection.length == 1){
 			//1.3 Referenz der Bg ermitteln:
 			let promiseLinkedArt = new Promise(function(resolve, reject){                  
-				RM.Data.getLinkedArtifacts(currentSelection[0],"Zugeordnete Baugruppen", function(res){  
+				RM.Data.getLinkedArtifacts(currentSelection[0],"System/Baugruppe", function(res){  
 					resolve(res.data.artifactLinks[0].targets);
 				});
 			});

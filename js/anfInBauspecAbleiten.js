@@ -86,7 +86,7 @@ async function anfInBauspecAbleiten(){
 
 
 				//3. Zum erzeugten BauspecText springen:
-				var fenster = window.open("https://jazz.dnet.lan/rm/web#action=com.ibm.rdm.web.pages.showArtifactPage&artifactURI="+newArt.data.moduleUri +"&artifactInModule="+newArt.data.uri +"&componentURI="+modulInterneAnforderungen.componentUri+"&vvc.configuration="+uriKonfiKontext, '_blank');				
+				var fenster = window.open("https://auewsv.elmcloud.de/rm/web#action=com.ibm.rdm.web.pages.showArtifactPage&artifactURI="+newArt.data.moduleUri +"&artifactInModule="+newArt.data.uri +"&componentURI="+modulInterneAnforderungen.componentUri+"&vvc.configuration="+uriKonfiKontext, '_blank');				
 
 				//4. Afos ermitteln:
 				afoErmitteln(newArt.data, newArt.data, 1);

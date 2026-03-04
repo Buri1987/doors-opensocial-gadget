@@ -14,7 +14,7 @@ async function contentBauspecBandAuslesen(uberschriftInBauspec, bgNrNeuUeberschr
 
 	if(modulInhaltMussNeuGeladenWerden){*/
 		let promiseInhaltModul = new Promise(function(resolve, reject){                  
-			RM.Data.getContentsStructure(new RM.ArtifactRef(uberschriftInBauspec.moduleUri, modulInterneAnforderungen.componentUri, "", "http://www.ibm.com/xmlns/rdm/types/ArtifactFormats#Module"), [RM.Data.Attributes.NAME, RM.Data.Attributes.ARTIFACT_TYPE], function(res){
+			RM.Data.getContentsStructure(new RM.ArtifactRef(uberschriftInBauspec.moduleUri, urlComponent, "", "http://www.ibm.com/xmlns/rdm/types/ArtifactFormats#Module"), [RM.Data.Attributes.NAME, RM.Data.Attributes.ARTIFACT_TYPE], function(res){
 				resolve(res.data);
 			});
 		});	

@@ -18,6 +18,10 @@ function guiAnpassen(ref){
 					widgetsEinblenden(["AnforderungAbleitenInBauspec"]);
 				break;
 
+				case "M_Interne Anforderungen":
+					widgetsEinblenden(["AnfInBauspecUebertragen"]);
+				break;
+
 				/*
 
 				case "Band Bauspec":	

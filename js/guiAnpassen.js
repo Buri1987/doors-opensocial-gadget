@@ -14,6 +14,10 @@ function guiAnpassen(ref){
 					widgetsEinblenden(["AnfInBauspecUebertragen"]);
 				break;
 
+				case "M_Band Bauspec":
+					widgetsEinblenden(["AnforderungAbleitenInBauspec"]);
+				break;
+
 				/*
 
 				case "Band Bauspec":	

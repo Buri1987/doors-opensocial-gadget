@@ -4,7 +4,7 @@ function ableitenAnSich(){
 
 		//neue Anforderung unter current Selektion erzeugen:
 		let attrs = new RM.AttributeValues();
-		attrs[RM.Data.Attributes.ARTIFACT_TYPE] = "Text in Spec";
+		attrs[RM.Data.Attributes.ARTIFACT_TYPE] = "A_Text in Spec";
 
 		let strategyAnf = new RM.LocationSpecification(currentSelection[0], RM.Data.PlacementStrategy.AFTER);
 		RM.Data.Module.createArtifact(attrs, strategyAnf, function(result) {
@@ -22,7 +22,7 @@ function ableitenAnSich(){
 			});
 
 			//Erzeugte Anforderung markieren:
-			top.location = "https://jazz.dnet.lan/rm/web#action=com.ibm.rdm.web.pages.showArtifactPage&artifactURI="+currentSelection[0].moduleUri +"&artifactInModule="+result.data.uri +"&componentURI="+modulInterneAnforderungen.componentUri+"&vvc.configuration="+uriKonfiKontext;
+			top.location = "urlFuerSPrungZuArtefakt + currentSelection[0].moduleUri +"&artifactInModule="+result.data.uri +"&componentURI="+modulInterneAnforderungen.componentUri+"&vvc.configuration="+uriKonfiKontext;
 
 		});
 	}

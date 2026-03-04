@@ -22,11 +22,16 @@
 		<span id="anzSelektierteArt">0</span><span> Artefakte selektiert!!!</span>	
 		<div id="container">
 
+			<div id="AnforderungAbleitenInBauspec">					
+				<p><b>[W2]</b> Zu markierter Anforderung eine neue Anforderung ableiten:</p>
+				<button id="btnAbleitenAnSich" onclick="">...an sich selbst</button>
+				<button id="btnAbleitenAnAnderenFako" onclick="">...an anderen Partner</button>		
+			</div>	
 			<div id="AnfInBauspecUebertragen">
 				<p id="textAnfInBauspecUebertragen"><b>[W3]</b> Markierte Anforderung in Bauspec...</p>
 				<button id="btnAnfInBauspecAbleiten" onclick="">...übertragen</button>	
-			</div>										
-			
+			</div>
+							
 	</div>
 		</div>
 		
@@ -36,11 +41,13 @@
 			//Button und Funktionen verbinden:
 			
 			document.getElementById("btnAnfInBauspecAbleiten").onclick = function(){anfInBauspecAbleiten()};
-
+			document.getElementById("btnAbleitenAnSich").onclick = function(){ableitenAnSich()};
+			document.getElementById("btnAbleitenAnAnderenFako").onclick = function(){ableitenAnAnderenFako()};
 			
 			//Projektreferenzen definieren:
 			var uriKonfiKontext;
 			var modulInterneAnforderungen;
+			var urlFuerSPrungZuArtefakt="https://auewsv.elmcloud.de/rm/web#action=com.ibm.rdm.web.pages.showArtifactPage&artifactURI=";
 			var ersteAnfInterneAnforderungen;
 			var modulBgUrl;
 			var erzeugteAnf = new Object();
@@ -61,6 +68,8 @@
 		<script type = "text/javascript" src="js\anfInBauspecAbleiten.js"></script>
 		<script type = "text/javascript" src="js\mBgVLaden.js"></script>
 		<script type = "text/javascript" src="js\getUeberschriftenRefZuBgRef.js"></script>
+		<script type = "text/javascript" src="js\ableitenAnAnderenFako.js"></script>
+		<script type = "text/javascript" src="js\ableitenAnSich.js"></script>
 
 
 

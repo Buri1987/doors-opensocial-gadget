@@ -17,8 +17,8 @@ function projektReferenzenAnpassen(refNeuGeoeffnet){
 				urlComponent = "https://auewsv.elmcloud.de/rm/rm-projects/_wv9jMO6rEe-YW9HoRy0Nmw/components/_wypq0O6rEe-YW9HoRy0Nmw";
 				uriKonfiKontext = "https://auewsv.elmcloud.de/rm/cm/stream/_wyw_lu6rEe-YW9HoRy0Nmw";
 				modulBgUrl="https://auewsv.elmcloud.de/rm/resources/MD_vtuCgBDDEfGDdaqHsaPgYg";
-				modulInterneAnforderungen = new RM.ArtifactRef("https://jazz.dnet.lan/rm/resources/MD_eqoRP5rVEeyfnazYjFzx3Q","https://jazz.dnet.lan/rm/rm-projects/_K8794JrVEeyfnazYjFzx3Q/components/_LJwR4JrVEeyfnazYjFzx3Q","", "http://www.ibm.com/xmlns/rdm/types/ArtifactFormats#Module");
-				ersteAnfInterneAnforderungen =  new RM.ArtifactRef("https://jazz.dnet.lan/rm/resources/BI_jLtPXprVEeyfnazYjFzx3Q","https://jazz.dnet.lan/rm/rm-projects/_K8794JrVEeyfnazYjFzx3Q/components/_LJwR4JrVEeyfnazYjFzx3Q","https://jazz.dnet.lan/rm/resources/MD_eqoRP5rVEeyfnazYjFzx3Q", "http://www.ibm.com/xmlns/rdm/types/ArtifactFormats#Text");
+				modulInterneAnforderungen = new RM.ArtifactRef("https://auewsv.elmcloud.de/rm/resources/MD_KAL4ERfHEfGOZdEZ4efH3w",urlComponent,"", "http://www.ibm.com/xmlns/rdm/types/ArtifactFormats#Module");
+				ersteAnfInterneAnforderungen =  new RM.ArtifactRef("https://auewsv.elmcloud.de/rm/resources/BI_QvjTEBfHEfGOZdEZ4efH3w",urlComponent,"https://auewsv.elmcloud.de/rm/resources/MD_KAL4ERfHEfGOZdEZ4efH3w", "http://www.ibm.com/xmlns/rdm/types/ArtifactFormats#Text");
 				baugruppenNummerLaden("https://auewsv.elmcloud.de/rm/resources/MD_vtuCgBDDEfGDdaqHsaPgYg");	
 
 			break;

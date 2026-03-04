@@ -1,5 +1,5 @@
 async function getUeberschriftenRefZuBgRef(structureNodeBg){
-	console.debug("Aufruf: getUeberschriftenRefZuBgRef    für: " + structureNodeBg.values[RM.Data.Attributes.NAME]);
+	console.log("Aufruf: getUeberschriftenRefZuBgRef    für: " + structureNodeBg.values[RM.Data.Attributes.NAME]);
 	
 	//Verlinkte Überschrift in Bauspec ermitteln (leerer Sting wenn es die Überschrift noch nicht gibt):
 	let refUeberschrift = await getBauSpecKapitelZuBg(structureNodeBg.ref);
@@ -11,7 +11,7 @@ async function getUeberschriftenRefZuBgRef(structureNodeBg){
 		let elternUeberschrift = await getUeberschriftenRefZuBgRef(structureNodeBg.parent);
 
 		//Fehlende Überschrift erzeugen
-		console.debug("Aufruf: Überschrift erzeugen für: " + structureNodeBg.values[RM.Data.Attributes.NAME]);
+		console.log("Aufruf: Überschrift erzeugen für: " + structureNodeBg.values[RM.Data.Attributes.NAME]);
 		let attrs = new RM.AttributeValues();
 		attrs[RM.Data.Attributes.ARTIFACT_TYPE] = "Überschrift";
 		attrs[RM.Data.Attributes.PRIMARY_TEXT] = structureNodeBg.values[RM.Data.Attributes.NAME] + " (" +  structureNodeBg.values["System-/Baugruppennummer"] + ")";

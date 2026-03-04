@@ -8,7 +8,7 @@ function bgVerlinken(){
 			baugruppenname = allAtt.data[0].values[RM.Data.Attributes.NAME];
 
 			currentSelection.forEach(function(anf, index){
-				RM.Data.createLink(anf, 'Zugeordnete Baugruppen', refBg, function(link){	
+				RM.Data.createLink(anf, 'System-/Baugruppennummer', refBg, function(link){	
 					if(index == currentSelection.length -1 ){
 						alert('Verlinkungen mit der BG: "' + baugruppenname + '" wurden erstellt:' );
 					}

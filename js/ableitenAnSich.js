@@ -22,7 +22,7 @@ function ableitenAnSich(){
 			});
 
 			//Erzeugte Anforderung markieren:
-			top.location = "urlFuerSPrungZuArtefakt + currentSelection[0].moduleUri +"&artifactInModule="+result.data.uri +"&componentURI="+modulInterneAnforderungen.componentUri+"&vvc.configuration="+uriKonfiKontext;
+			top.location = urlFuerSPrungZuArtefakt + currentSelection[0].moduleUri +"&artifactInModule="+result.data.uri +"&componentURI="+modulInterneAnforderungen.componentUri+"&vvc.configuration="+uriKonfiKontext;
 
 		});
 	}

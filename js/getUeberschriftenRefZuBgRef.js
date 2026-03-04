@@ -13,7 +13,7 @@ async function getUeberschriftenRefZuBgRef(structureNodeBg){
 		//Fehlende Überschrift erzeugen
 		console.log("Aufruf: Überschrift erzeugen für: " + structureNodeBg.values[RM.Data.Attributes.NAME]);
 		let attrs = new RM.AttributeValues();
-		attrs[RM.Data.Attributes.ARTIFACT_TYPE] = "Überschrift";
+		attrs[RM.Data.Attributes.ARTIFACT_TYPE] = "A_Überschrift";
 		attrs[RM.Data.Attributes.PRIMARY_TEXT] = structureNodeBg.values[RM.Data.Attributes.NAME] + " (" +  structureNodeBg.values["System-/Baugruppennummer"] + ")";
 		attrs[RM.Data.Attributes.IS_HEADING] = true;
 

@@ -31,7 +31,7 @@ async function getUeberschriftenRefZuBgRef(structureNodeBg){
      			RM.Data.Module.createArtifact(attrs,  strategy, function(newArt){
 			
 				//Überschrift mit Baugruppe in MarinebaugruppenVerzeichnis verlinken:
-				RM.Data.createLink(newArt.data, "System-/Baugruppennummer", structureNodeBg.ref, function(res){
+				RM.Data.createLink(newArt.data, "Systemaufbruch", structureNodeBg.ref, function(res){
 					resolve(newArt.data);			
 				});
 			});									

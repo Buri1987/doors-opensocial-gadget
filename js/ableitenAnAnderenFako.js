@@ -5,7 +5,7 @@ function ableitenAnAnderenFako(){
 	let attrs = new RM.AttributeValues();
 	attrs[RM.Data.Attributes.ARTIFACT_TYPE] = "A_Interne Anforderung";
 
-	let strategyAnf = new RM.LocationSpecification(ersteAnfInterneAnforderungen, RM.Data.PlacementStrategy.BEFORE);
+	let strategyAnf = new RM.LocationSpecification(ersteAnfInterneAnforderungen, RM.Data.PlacementStrategy.AFTER);
 	RM.Data.Module.createArtifact(attrs, strategyAnf, function(result) {
 
 			//LSetzt um Link zwischen beiden ANforderungen setzen:

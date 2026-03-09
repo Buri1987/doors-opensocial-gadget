@@ -1,7 +1,7 @@
 async function getBgBummerVonUeberschriftStructureNode(structureNoteTextInSpec){
 	//Prüfen, ob Überschrift Link zu Bg hat:
 	let promiseGetLinkedArtifacts = new Promise(async  function(resolve, reject){
-		RM.Data.getLinkedArtifacts(structureNoteTextInSpec.parent.ref, "System-/Baugruppennummer", function(linkedArt){
+		RM.Data.getLinkedArtifacts(structureNoteTextInSpec.parent.ref, "Systemaufbruch", function(linkedArt){
 			resolve(linkedArt.data);
 		});
 	});

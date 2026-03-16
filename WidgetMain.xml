@@ -9,7 +9,6 @@
    <head>
 		<link rel="stylesheet" type="text/css" href="css\styleWidgets.css?v1.000">
 
-		<div id="result"></div>
 
 		<script 
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
@@ -20,9 +19,9 @@
 
    <body>
 		<span id="anzSelektierteArt">0</span><span> Artefakte selektiert!!!</span>	
-		<div id="container">
+		<div id="container" class="hiddenInit">
 
-			<div id="AnforderungAbleitenInBauspec">					
+			<div id="AnforderungAbleitenInBauspec" >					
 				<p><b>[W2]</b> Zu markierter Anforderung eine neue Anforderung ableiten:</p>
 				<button id="btnAbleitenAnSich" onclick="">...an sich selbst</button>
 				<button id="btnAbleitenAnAnderenFako" onclick="">...an anderen Partner</button>		
@@ -57,6 +56,8 @@
 			RM.Event.subscribe(RM.Event.ARTIFACT_OPENED, function(ref){
 				guiAnpassen(ref);
 				projektReferenzenAnpassen(ref);
+
+				$("#container").removeClass("hiddenInit");
 
 			});
 

@@ -1,6 +1,9 @@
 	.invisible {
 		display: none;
 	}
+	.hiddenInit {
+    display: none;
+	}
 	p{
 	margin: 0;
 	}

@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<rdf:RDF 
+   xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+   xmlns:ju='http://jazz.net/ns/ui#' 
+   xmlns:dc='http://purl.org/dc/terms/'>
+   <ju:catalog-entry>
+      <dc:title>Hilfsfunktionen</dc:title>
+      <dc:description>Kleine Hilfsfunktionen zum effizienteren Arbeiten in Doors NG.</dc:description>
+      <dc:creator>ZKKS</dc:creator>
+      <ju:gadget rdf:resource='https://jazz.dnet.lan/Widgets/Timos_Sandbox/Widgets/WidgetMain.xml' />
+   </ju:catalog-entry>
+</rdf:RDF> 
